@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E-commerce product detail</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/slick/slick.css" rel="stylesheet">
+    <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <div id="page-wrapper" class="gray-bg mx-auto">
+        <div class="row border-bottom">
+            
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>E-commerce product detail</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a>E-commerce</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        <strong>Product detail</strong>
+                    </li>
+                </ol>
+                <a href="./product_cart_page.html"> Cart <span class="border bg-danger rounded-circle p-1"  id="cart_number"></span></a>
+                <span> wishlist <span class="border bg-danger rounded-circle p-1" id="wishlist_num"></span></span>
+
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="ibox product-detail">
+                        <div class="ibox-content">
+
+                            <div class="row">
+                                <div class="col-md-5">
+
+
+                                    <div class="product-images">
+
+                                        <div>
+                                            <div id="image_1" class="image-imitation d-flex">
+                                                
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div id="image_2" class="image-imitation d-flex">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-7">
+
+                                    <h2 class="font-bold m-b-xs" id="product_title">
+                                        
+                                    </h2>
+                                    <small><span class="bold" >Maker</span> <span id="maker"></span> </small>
+                                    <div class="m-t-md">
+                                        <h2 class="product-main-price" >$ <span id="product_price"></span>  <small class="text-muted">Exclude Tax</small> </h2>
+                                    </div>
+                                    <hr>
+
+                                    <h4>Product description</h4>
+
+                                    <div class="small text-muted" id="product_description">
+                                
+                                    </div>
+                                    <dl class="small m-t-md">
+                                        <dt>Colors</dt>
+                                        <label class="border p-2" style="background: red;">
+                                        </label>
+                                            <input name='color' class="ml-1 mr-2" style=" background-color: red;" type="radio" value="red" checked='checked' />
+                                        <label class="border p-2" style="background: green;">
+                                        </label>
+                                        <input name='color' class="ml-1 mr-2" type="radio" value="green"  />
+                                        <label class="border p-2" style="background: blue;">
+                                        </label>
+                                        <input name='color' class="ml-1 mr-2" type="radio" value="blue" />
+                                        <label class="border p-2" style="background: gold;">
+                                        </label>
+                                        <input name='color' class="ml-1 mr-2" type="radio" value="gold" />
+                                        <label class="border p-2" style="background: black;">
+                                        </label>
+                                        <input name='color' class="ml-1 mr-2" type="radio" value="black" />
+
+                                        <dd>Select a Color of your choice</dd>
+                                        <div id='display_product_colors'>
+
+                                        </div>
+                                        <dt>Size</dt>
+                                        <dd>
+                                            <Label class="border px-1">Sm</Label><input checked="checkelabel" class="ml-1 mr-2"  name='size' type="radio" value="sm"/>
+                                            <Label class="border px-1">S</Label><input  class="ml-1 mr-2" name='size' type="radio" value="s"/>
+                                            <Label class="border px-1">L</Label><input  class="ml-1 mr-2" name='size' type="radio" value="L"/>
+                                            <Label class="border px-1">Lx</Label><input class="ml-1 mr-2"  name='size' type="radio" value="Lx"/>
+
+                                        </dd>
+                                        <dt>Amount</dt>
+                                        <dd>
+                                            <button id="increase_product_to_buy" class="btn btn-sm btn-warning">+</button> 
+                                            <span><input id="product_amount" style="max-width: 30px;" class="text-center" placeholder="1" type="text" /></span>
+                                            <button id="reduce_product_to_buy" class="btn btn-sm btn-danger">-</button>
+                                        </dd>
+                                        <dt>Total</dt>
+                                        <dd>
+                                            <span id="total" class="h2"></span>
+                                        </dd>
+                                    </dl>
+                                    <hr>
+
+                                    <div>
+                                        <div class="btn-group">
+                                            <button class="btn btn-primary btn-sm" id="add_to_cart"><i class="fa fa-cart-plus" ></i> Add to cart</button>
+                                            <button class="btn btn-white btn-sm" id="add_to_wishlist"><i class="fa fa-star"></i> Add to wishlist </button>
+                                            <button class="btn btn-white btn-sm" id="contact_seller"><i class="fa fa-envelope"></i> Contact with Seller </button>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="ibox-footer">
+                            <span class="float-right">
+                                Full stock - <i class="fa fa-clock-o"></i> 14.04.2016 10:04 pm
+                            </span>
+                            The generated Lorem Ipsum is therefore always free
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+
+
+
+
+        </div>
+        <div class="footer">
+            <div class="float-right">
+                10GB of <strong>250GB</strong> Free.
+            </div>
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2018
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- slick carousel-->
+<script src="js/plugins/slick/slick.min.js"></script>
+<script src="js/db.js"></script>
+<script>
+    $(document).ready(function(){
+        
+        $('.product-images').slick({
+            dots: true
+        });
+        
+    });
+    const myUrlParam = new URLSearchParams(window.location.search);
+    const product_id = myUrlParam.get('id');
+    let product = null
+    for (let i = 0; i < db.products.length; i++) {
+        let p = db.products[i];
+        if (p.Id === product_id){
+            product = {...p}
+            break;
+        }
+    }
+
+
+    // if(!product){
+    //     alert("404")
+    // }
+    let product_title_Elem = document.getElementById('product_title')
+    let product_description_elem = document.getElementById("product_description");
+    let product_price_elem = document.getElementById('product_price')
+    let total_elem = document.getElementById('total')
+    let maker_elem = document.getElementById('maker')
+    $('#image_1').append(`<img src='${product.img}' class="w-100 my-auto"/>` )
+    $('#image_2').append(`<img src='${product.img}' class="w-100 my-auto"/>` )
+
+    product_description_elem.innerHTML = product.Description
+    product_title_Elem.innerHTML = product.Title
+    maker_elem.innerHTML = product.Maker
+    product_price_elem.textContent = product.Price
+
+    let increase_product_to_buy_Elm = document.getElementById('increase_product_to_buy');
+    let reduce_product_to_buy_Elm = document.getElementById('reduce_product_to_buy');
+    let product_amount_elm = document.getElementById('product_amount');
+    let add_to_cart_elem = document.getElementById('add_to_cart');
+    let add_to_wishlist_elem = document.getElementById('add_to_wishlist');
+    let cart_number_elem = document.getElementById('cart_number');
+    let wishlist_num_elem = document.getElementById("wishlist_num");
+
+    let c = localStorage.getItem("cart");
+    let w = localStorage.getItem("wishlist")
+    if (w){
+        wishlist_num_elem.textContent = Object.keys(JSON.parse(w)).length
+    }
+    if (c){
+        cart_number_elem.textContent = Object.keys(JSON.parse(c)).length
+    };
+    increase_product_to_buy_Elm.addEventListener('click',(e)=>{
+        e.preventDefault()
+        if(!product_amount_elm.value){
+            product_amount_elm.value = 1
+            total_elem.textContent = parseInt(product_price_elem.textContent)
+
+        }else{
+            product_amount_elm.value = parseInt(product_amount_elm.value.replace(/[^\w\s]/gi, '')) + 1
+            total_elem.textContent = parseInt(product_price_elem.textContent)* parseInt(product_amount_elm.value)
+        }
+    })
+    reduce_product_to_buy_Elm.addEventListener('click', (e)=>{
+        e.preventDefault();
+        if(!product_amount_elm.value){
+            product_amount_elm.value = 1
+            total_elem.textContent = parseInt(product_price_elem.textContent)
+        }else if(parseInt(product_amount_elm.value.replace(/[^\w\s]/gi, '')) === 1){
+            product_amount_elm.value = 1
+            total_elem.textContent = parseInt(product_price_elem.textContent)* parseInt(product_amount_elm.value)
+        } else{
+            product_amount_elm.value = parseInt(product_amount_elm.value.replace(/[^\w\s]/gi, '')) - 1
+            total_elem.textContent = parseInt(product_price_elem.textContent)* parseInt(product_amount_elm.value)
+        }
+    })
+
+    add_to_cart_elem.addEventListener('click', (e)=>{
+        e.preventDefault();
+        let color
+        let radios = document.getElementsByName('color');
+        for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+            color = radios[i].value
+            break;
+            }
+        }
+        let size 
+        radios = document.getElementsByName('size');
+
+        for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+            size = radios[i].value
+            break;
+            }
+        }
+    
+        let p = {...product}
+        p.Total = total_elem.textContent?total_elem.textContent:p.Price
+        p.Amount = product_amount_elm.value.replace(/[^\w\s]/gi, '')?product_amount_elm.value.replace(/[^\w\s]/gi, ''):1
+        p.color = color
+        p.size = size
+        let cart = localStorage.getItem("cart");
+        if (!cart) { 
+            let obj = {
+                [p.Id]: p
+            }
+            localStorage.setItem('cart',JSON.stringify(obj))
+            cart_number_elem.textContent = 1
+        }else{
+            let cartObj = JSON.parse(cart)
+            cartObj[p.Id] = p
+            localStorage.setItem('cart',JSON.stringify(cartObj))
+            cart_number_elem.textContent = Object.keys(cartObj).length
+        }
+    })
+
+    add_to_wishlist_elem.addEventListener('click', (e)=>{
+        e.preventDefault()
+        let wishlist = localStorage.getItem("wishlist");
+        if (!wishlist) {
+            let p = {...product}
+            let obj = {
+                [p.Id]: p
+            }
+            localStorage.setItem('wishlist',JSON.stringify(obj))
+            wishlist_num_elem.textContent = 1
+        }else {
+            let wishlistObj = JSON.parse(wishlist)
+            wishlistObj[p.Id] = p
+            localStorage.setItem('wishlist',JSON.stringify(wishlistObj))
+            wishlist_num_elem.textContent = Object.value(wishlistObj).length
+        }
+
+    })
+</script>
+
+</body>
+
+</html>

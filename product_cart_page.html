@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cart</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="page-wrapper" class="gray-bg mx-auto">
+        <div class="row border-bottom">
+       
+        </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Carts </h2>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a>Products</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            <strong>Cart</strong>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        <div class="wrapper wrapper-content  animated fadeInRight">
+                        <div class="row">
+                <div class="col-md-9">
+
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <span class="float-right">(<strong id="cart_number"></strong>) items</span>
+                            <h5>Items in your cart</h5>
+                            <span><input class="border" id="coupon_input" name="coupon_input"  type="text" placeholder="Enter coupon for 50% discount"/></span>
+                        </div>
+                        <div class="ibox-content">
+
+
+                            <div class="table-responsive">
+                                <table class="table shoping-cart-table">
+
+                                    <tbody id="cart_table_body">
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        
+                        <div class="ibox-content">
+
+                            <button class="btn btn-primary float-right"><i class="fa fa fa-shopping-cart"></i> Checkout</button>
+                            <a class="btn btn-white" href="index.html"><i class="fa fa-arrow-left"></i> Continue shopping</a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <h5>Cart Summary</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <span>
+                                Total
+                            </span>
+                            <h2  class="font-bold">
+                                $<span id="cart_summary"></span>,00
+                            </h2>
+
+                            <hr/>
+                            <span class="text-muted small">
+                                <span id="valid-Coupon">
+                                    <span>Amount To Pay <span class="h6">(50% OFF)</span></span>
+                                    <h1 class="font-bold" >
+                                    $<span id="discount_price"></span> ,00   
+                                    </h1>
+                                    *For United States, France and Germany applicable sales tax will be applied
+
+                                </span>
+                            </span>
+                            <div class="m-t-sm">
+                                <div class="btn-group">
+                                <a href="ecommerce-cart.html#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart"></i> Checkout</a>
+                                <a href="ecommerce-cart.html#" class="btn btn-white btn-sm"> Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <h5>Support</h5>
+                        </div>
+                        <div class="ibox-content text-center">
+
+
+
+                            <h3><i class="fa fa-phone"></i> +43 100 783 001</h3>
+                            <span class="small">
+                                Please contact with us if you have any questions. We are avalible 24h.
+                            </span>
+
+
+                        </div>
+                    </div>
+
+                    <div class="ibox">
+                        <div class="ibox-content">
+
+                            <p class="font-bold">
+                            Other products you may be interested
+                            </p>
+
+                            <hr/>
+                            <div>
+                                <a href="ecommerce-cart.html#" class="product-name"> Product 1</a>
+                                <div class="small m-t-xs">
+                                    Many desktop publishing packages and web page editors now.
+                                </div>
+                                <div class="m-t text-righ">
+
+                                    <a href="ecommerce-cart.html#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div>
+                                <a href="ecommerce-cart.html#" class="product-name"> Product 2</a>
+                                <div class="small m-t-xs">
+                                    Many desktop publishing packages and web page editors now.
+                                </div>
+                                <div class="m-t text-righ">
+
+                                    <a href="ecommerce-cart.html#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="footer">
+            <div class="float-right">
+                10GB of <strong>250GB</strong> Free.
+            </div>
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2018
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/db.js"></script>
+    <script>
+
+        let cart_number_elem = document.getElementById('cart_number')
+        let cart_table_body_elem = document.getElementById('cart_table_body')
+        let cart_summary_elem = document.getElementById('cart_summary')
+        let valid_Coupon_elem = document.getElementById("valid-Coupon")
+        let discount_price_elem = document.getElementById("discount_price");
+        valid_Coupon_elem.style.display ='none'
+
+        let token = ''
+        let valid_token = 12345
+        function loop(carts, c) {
+            let myC = JSON.parse(c)
+            let total_price = 0
+            for (let i = 0; i < carts.length; i++) {
+                let cart = carts[i];
+                let tr = `<tr>
+                    <td width="90">
+                        <div class="cart-product-imitation">
+                            <img src='${cart.img}' class="w-100"/>
+                        </div>
+                    </td>
+                    <td class="desc">
+                        <h3>
+                            <a href="ecommerce-cart.html#" class="text-navy">
+                                ${cart.Title}
+                            </a>
+                        </h3>
+                        <p class="small">
+                            ${cart.Description}
+                        </p>
+                        <dl class="small m-b-none">
+                            <dt>Description lists</dt>
+                            <dd><span class='bold'>Color:</span> <span style="color: ${cart.color}">${cart.color}</span>  <span class='ml-2 bold'>Size:</span>  <span class='border px-1'>${cart.size}</span></dd>
+                        </dl>
+
+                        <div class="m-t-sm">
+                            <a href="product_cart_page.html#"  class="text-muted"><i class="fa fa-gift"></i> Add gift package</a>
+                            |
+                            <a href="product_cart_page.html#" id='remove-${cart.Id}' class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
+                        </div>
+                    </td>
+
+                    <td>
+                        $${cart.Price}
+                    </td>
+                    <td width="65">
+                        <input type="text"  style='width: 50px' id="input-${cart.Id}" class="form-control">
+                        
+                    </td>
+                    <td>
+                        <h4 id='total-${cart.Id}'>
+                            ${cart.Total}
+                        </h4>
+                    </td>
+
+                </tr>`
+                console.log(cart,cart.Amount);
+                $('#cart_table_body').append(tr)
+                
+                let input = document.getElementById(`input-${cart.Id}`)
+                $(`#input-${cart.Id}`).val(cart.Amount)
+                $(`#input-${cart.Id}`).on('keyup',(e)=>{
+                    $(`#input-${cart.Id}`).val = e.target.value.replace(/[^\w\s]/gi, '') 
+                    let v = e.target.value
+                    console.log(v.replace(/[^\w\s]/g, ''));
+                    cart.Amount = v
+                    if (v){
+                        cart.Total = parseInt(v) * parseInt(cart.Price)
+                    }else {
+                        cart.Total = 0
+                    }
+                    let total = 0
+                    for (let g = 0; g < carts.length; g++) {
+                        let c = carts[g];
+                        total = total + parseInt(c.Total)
+                    }
+                    cart_summary_elem.textContent = total
+                    discount_price_elem.textContent = parseInt(cart_summary_elem.textContent)/2
+
+                    document.getElementById(`total-${cart.Id}`).innerHTML = cart.Total
+                })
+                document.getElementById(`remove-${cart.Id}`).addEventListener('click', (e)=>{
+                    e.preventDefault();
+                    delete myC[cart.Id]
+                    localStorage.setItem('cart',JSON.stringify(myC));
+                    cart_table_body_elem.innerHTML = ''
+                    loop(myC)
+                    
+                })
+                
+                total_price = total_price + parseInt(cart.Total)
+            }
+            cart_summary_elem.textContent = total_price
+            discount_price_elem.textContent = parseInt(cart_summary_elem.textContent)/2
+
+
+            // cart_table_body_elem.appendChild(tr)
+        }
+   
+        let c = localStorage.getItem("cart");
+        if (c) {
+            let carts = Object.values(JSON.parse(c))
+            cart_number_elem.textContent = carts.length
+            loop(carts, c)
+        }
+        // function coupon_input(e) {
+        //     console.log('llllllll');
+        //     // console.log(e.target.value);
+        // }
+        $('#coupon_input').on('keyup', (e)=>{
+            token = e.target.value;
+            if (parseInt(token) === valid_token){
+                valid_Coupon_elem.style.display = 'inline'
+                discount_price_elem.textContent = parseInt(cart_summary_elem.textContent)/2
+            }
+            console.log(token);
+        })
+        let coupon_input_elem = document.querySelector('')
+        coupon_input_elem.addEventListener('change', (e)=>{
+        })
+    
+    </script>
+
+
+</body>
+
+</html>

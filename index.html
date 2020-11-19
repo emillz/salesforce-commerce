@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E-commerce product detail</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/slick/slick.css" rel="stylesheet">
+    <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <div id="page-wrapper" class="gray-bg mx-auto">
+        <div class="row border-bottom">
+            
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>E-commerce product detail</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <!-- <li class="breadcrumb-item">
+                        <a>E-commerce</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        <strong>Product detail</strong>
+                    </li> -->
+                </ol>
+                <a href="./product_cart_page.html"> Cart <span class="border bg-danger rounded-circle p-1"  id="cart_number"></span></a>
+                <span> wishlist <span class="border bg-danger rounded-circle p-1" id="wishlist_num"></span></span>
+
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row" id="product_container">
+                
+
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="float-right">
+                10GB of <strong>250GB</strong> Free.
+            </div>
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2018
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- slick carousel-->
+<script src="js/plugins/slick/slick.min.js"></script>
+<script src="js/db.js"></script>
+<script>
+    $(document).ready(function(){
+        
+        $('.product-images').slick({
+            dots: true
+        });
+        console.log(db.products);
+        for (let i = 0; i < db.products.length; i++) {
+            product = db.products[i];
+            let col = `
+            <div class="col-md-3">
+                    <div class="ibox">
+                        <div class="ibox-content product-box">
+
+                            <div class="product-imitation">
+                                <a href="./product_detail_page.html?id=${product.Id}">
+                                <img src="${product.img}" class="w-100"/>
+                                </a>
+                            </div>
+                            <div class="product-desc">
+                                <span class="product-price">
+                                    $${product.Price}
+                                </span>
+                                <small class="text-muted">Category</small>
+                                <a href="./product_detail_page.html?id=${product.Id}" class="product-name"> ${product.Title}</a>
+
+
+
+                                <div class="small m-t-xs">
+                                    ${product.Description}
+                                </div>
+                                <div class="m-t text-righ">
+                                    <a href="./product_detail_page.html?id=${product.Id}" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `
+            $('#product_container').append(col)
+            
+        }
+
+    });
+    let cart_number_elem = document.getElementById('cart_number');
+    let wishlist_num_elem = document.getElementById("wishlist_num");
+    let c = localStorage.getItem("cart");
+    let w = localStorage.getItem("wishlist")
+    if (w){
+        wishlist_num_elem.textContent = Object.keys(JSON.parse(w)).length
+    }
+    if (c){
+        cart_number_elem.textContent = Object.keys(JSON.parse(c)).length
+    };
+
+
+    
+</script>
+
+</body>
+
+</html>
